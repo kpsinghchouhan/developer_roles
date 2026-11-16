@@ -10,8 +10,9 @@ Installs [Claude Code](https://code.claude.com/docs/en/setup) (`claude`) on Ubun
 | Ubuntu   | `ansible.builtin.apt` from the Claude Code apt repository (needs `become`) | Not installed                                    |
 | macOS    | `community.general.homebrew_cask` (runs as user)                           | `community.general.homebrew_cask` (runs as user) |
 
-On Ubuntu the role adds Anthropic's release signing key to `/etc/apt/keyrings` and the
-repository to `/etc/apt/sources.list.d/claude-code.list`, as documented by Anthropic.
+On Ubuntu the role adds Anthropic's release signing key as `/etc/apt/keyrings/claude-code.asc` and
+the repository as `/etc/apt/sources.list.d/claude-code.sources`, with
+`ansible.builtin.deb822_repository`.
 
 ## Requirements
 
@@ -28,9 +29,9 @@ repository to `/etc/apt/sources.list.d/claude-code.list`, as documented by Anthr
 | `claude_code_channel`          | `"stable"`                                       | `stable` or `latest`. Selects the apt repository on Ubuntu and the cask on macOS.   |
 | `claude_code_package_state`    | `"present"`                                      | `present` or `latest`. Use `latest` to upgrade an existing Claude Code.             |
 | `claude_code_apt_keyring_url`  | `"https://downloads.claude.ai/keys/claude-code.asc"` | URL of the release signing key. Ubuntu only.                                    |
-| `claude_code_apt_repo_url`     | `"https://downloads.claude.ai/claude-code/apt"`  | Base URL of the apt repository; the channel is appended. Ubuntu only.               |
+| `claude_code_apt_repo_url`     | `"https://downloads.claude.ai/claude-code/apt"`  | Base URL of the apt repository; the channel is the apt suite. Ubuntu only.          |
+| `claude_code_apt_repo_name`    | `"claude-code"`                                  | Name of the apt source and key files. Ubuntu only.                                  |
 | `claude_desktop_install`       | `true`                                           | Install Claude Desktop. macOS only.                                                 |
-| `claude_desktop_cask_name`     | `"claude"`                                       | Name of the Claude Desktop cask. macOS only.                                        |
 | `claude_desktop_package_state` | `"present"`                                      | `present` or `latest`. Use `latest` to upgrade an existing Claude Desktop. macOS only. |
 
 All variables are validated by `meta/argument_specs.yml`.
@@ -72,7 +73,7 @@ leave the repository configured without the package installed; re-running the ro
 ## Roll-back capabilities
 
 None. To remove the install on Ubuntu, remove the `claude-code` package,
-`/etc/apt/sources.list.d/claude-code.list` and the key file. On macOS, run
+`/etc/apt/sources.list.d/claude-code.sources` and `/etc/apt/keyrings/claude-code.asc`. On macOS, run
 `brew uninstall --cask claude-code claude` (or `claude-code@latest` for the latest channel).
 
 ## License

@@ -7,6 +7,8 @@
       - ansible_facts['os_family'] == 'Darwin'
     fail_msg: "The nerd_font role supports macOS only. This host is {{ ansible_facts['os_family'] }}."
     quiet: true
+  tags:
+    - always
 
 - name: Install Nerd Font casks with Homebrew
   community.general.homebrew_cask:
@@ -14,3 +16,6 @@
     state: "{{ nerd_font_package_state }}"
   become: false
   loop: "{{ nerd_font_fonts }}"
+  tags:
+    - install
+    - nerd_font_install

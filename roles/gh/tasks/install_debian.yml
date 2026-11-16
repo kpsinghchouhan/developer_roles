@@ -12,9 +12,11 @@
         components:
           - main
         signed_by: "{{ gh_apt_keyring_url }}"
+      register: __gh_apt_repo
 
     - name: Install GitHub CLI package
       ansible.builtin.apt:
-        name: "{{ gh_package_name }}"
+        name: "{{ __gh_package_name }}"
         state: "{{ gh_package_state }}"
         update_cache: true
+      when: not (ansible_check_mode and __gh_apt_repo is changed)

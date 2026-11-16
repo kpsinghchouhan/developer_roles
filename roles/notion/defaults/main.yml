@@ -2,4 +2,4 @@
 # defaults file for kpsinghchouhan.linux_developer_roles.notion
 
 # Package state: 'present' or 'latest'
-notion_package_state: 'present'
+notion_package_state: present

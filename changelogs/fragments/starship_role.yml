@@ -1,5 +1,5 @@
 ---
 minor_changes:
-  - starship - new role to install the starship prompt from GitHub releases
-    on Ubuntu or Homebrew on macOS, copy ``~/.config/starship.toml`` and
-    enable starship in bash and zsh.
+  - starship - new role to install the starship prompt with APT on Ubuntu or Homebrew on macOS,
+    copy ``~/.config/starship.toml`` and enable starship in the rc file of the connecting user's
+    login shell (``starship_shell``, from the ``user_shell`` fact).

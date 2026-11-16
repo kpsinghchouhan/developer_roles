@@ -10,8 +10,6 @@
     - name: Apply the google_drive role
       ansible.builtin.include_role:
         name: kpsinghchouhan.linux_developer_roles.google_drive
-      vars:
-        google_drive_sudo_password: "{{ ansible_become_password | default(omit) }}"
 
     - name: Find the Google Drive app
       ansible.builtin.stat:

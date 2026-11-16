@@ -2,4 +2,4 @@
 # defaults file for kpsinghchouhan.linux_developer_roles.zed
 
 # Package state: 'present' or 'latest'
-zed_package_state: 'present'
+zed_package_state: present

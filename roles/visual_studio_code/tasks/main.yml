@@ -7,6 +7,8 @@
       - ansible_facts['os_family'] == 'Darwin'
     fail_msg: "The visual_studio_code role supports macOS only. This host is {{ ansible_facts['os_family'] }}."
     quiet: true
+  tags:
+    - always
 
 # The cask is marked auto_updates, so Homebrew only upgrades it with --greedy
 - name: Install Visual Studio Code cask with Homebrew
@@ -15,3 +17,6 @@
     state: "{{ visual_studio_code_package_state }}"
     greedy: "{{ visual_studio_code_package_state == 'latest' }}"
   become: false
+  tags:
+    - install
+    - visual_studio_code_install

@@ -9,10 +9,6 @@ argument_specs:
     author:
       - Krishana Pal Singh Chouhan
     options:
-      gh_package_name:
-        type: str
-        description: Name of the GitHub CLI package to install.
-        default: "gh"
       gh_package_state:
         type: str
         description: State of the package. Use 'latest' to upgrade an existing install.
@@ -22,11 +18,17 @@ argument_specs:
         type: str
         description: URL of the GitHub CLI apt archive keyring. Ubuntu only.
         default: "https://cli.github.com/packages/githubcli-archive-keyring.gpg"
-      gh_apt_keyring_path:
-        type: str
-        description: Path where the apt archive keyring is saved. Ubuntu only.
-        default: "/etc/apt/keyrings/githubcli-archive-keyring.gpg"
       gh_apt_repo_url:
         type: str
         description: URL of the GitHub CLI apt repository. Ubuntu only.
         default: "https://cli.github.com/packages"
+      gh_apt_repo_name:
+        type: str
+        description:
+          - Name of the apt repository. Ubuntu only.
+          - Names the source file /etc/apt/sources.list.d/<name>.sources and the keyring /etc/apt/keyrings/<name>.gpg.
+        default: "github-cli"
+      gh_apt_repo_channel:
+        type: str
+        description: Suite of the GitHub CLI apt repository. Ubuntu only.
+        default: "stable"

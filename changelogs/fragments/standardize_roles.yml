@@ -1,0 +1,10 @@
+---
+minor_changes:
+  - roles - tag tasks so parts of a role can be run with ``--tags``. Each role tags its install
+    tasks ``install`` and ``<role>_install`` and, where it manages a config file, its config tasks
+    ``config`` and ``<role>_config``. Platform checks are tagged ``always``.
+  - adobe_acrobat_reader, google_drive, hashicorp_vagrant, virtualbox - pass ``ansible_become_password``
+    to the cask's ``.pkg`` installer instead of a role-specific ``<role>_sudo_password`` variable.
+  - claude, gh - make the Homebrew cask and package names internal role variables instead of
+    user options (``claude_desktop_cask_name`` and ``gh_package_name`` are removed).
+  - nerd_font - install the Hack Nerd Font by default instead of FiraCode.
