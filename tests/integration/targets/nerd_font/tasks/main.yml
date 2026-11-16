@@ -12,14 +12,14 @@
         name: kpsinghchouhan.linux_developer_roles.nerd_font
 
     - name: List the installed Nerd Font cask
-      ansible.builtin.command: brew list --cask font-fira-code-nerd-font
+      ansible.builtin.command: brew list --cask font-hack-nerd-font
       register: __nerd_font_test_cask
       changed_when: false
 
     - name: Assert that the Nerd Font is installed
       ansible.builtin.assert:
         that:
-          - "'FiraCodeNerdFont' in __nerd_font_test_cask['stdout']"
+          - "'HackNerdFont' in __nerd_font_test_cask['stdout']"
 
 - name: Test the role on other platforms
   when: ansible_facts['os_family'] != 'Darwin'

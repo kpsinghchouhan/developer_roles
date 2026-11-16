@@ -7,7 +7,7 @@
 
 - name: Install Claude Desktop cask with Homebrew
   community.general.homebrew_cask:
-    name: "{{ claude_desktop_cask_name }}"
+    name: "{{ __claude_desktop_cask_name }}"
     state: "{{ claude_desktop_package_state }}"
   become: false
   when: claude_desktop_install | bool

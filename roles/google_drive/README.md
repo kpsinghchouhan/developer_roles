@@ -16,8 +16,9 @@ The `google-drive` cask installs `/Applications/Google Drive.app` from a `.pkg` 
 
 - `community.general` collection (declared as a collection dependency), for Homebrew.
 - Homebrew already installed.
-- sudo rights for the connecting user. Homebrew runs the `.pkg` installer with `sudo`. Set
-  `google_drive_sudo_password` unless the user has passwordless sudo.
+- sudo rights for the connecting user. Homebrew runs the `.pkg` installer with `sudo`, and the
+  role passes it `ansible_become_password`. Run the play with `--ask-become-pass` unless the user
+  has passwordless sudo.
 - Facts gathered for the play (`gather_facts: true`, the default). The role uses `os_family`.
 
 ## Role Variables
@@ -25,7 +26,6 @@ The `google-drive` cask installs `/Applications/Google Drive.app` from a `.pkg` 
 | Variable                     | Default     | Description                                                         |
 | ---------------------------- | ----------- | ------------------------------------------------------------------- |
 | `google_drive_package_state` | `"present"` | `present` or `latest`. Use `latest` to upgrade an existing install. |
-| `google_drive_sudo_password` | not set     | Password for the `.pkg` installer's sudo prompt. Not logged.        |
 
 All variables are validated by `meta/argument_specs.yml`.
 
@@ -51,11 +51,10 @@ None.
   hosts: workstations
   roles:
     - role: kpsinghchouhan.linux_developer_roles.google_drive
-      google_drive_sudo_password: "{{ ansible_become_password }}"
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 
-Run the playbook with `--ask-become-pass`, or keep the password in Ansible Vault.
+Run the playbook with `--ask-become-pass`, or keep `ansible_become_password` in Ansible Vault.
 
 ## Role Idempotency
 

@@ -9,8 +9,8 @@ Installs [GitHub CLI](https://cli.github.com/) (`gh`).
 | Ubuntu   | `ansible.builtin.apt` from the GitHub CLI apt repository (needs `become`)             |
 | macOS    | `community.general.homebrew` (runs as user)                                           |
 
-On Ubuntu the role adds GitHub's archive keyring to `/etc/apt/keyrings` and the
-repository to `/etc/apt/sources.list.d/github-cli.list`, as documented by GitHub.
+On Ubuntu the role adds GitHub's archive keyring as `/etc/apt/keyrings/github-cli.gpg` and the
+repository as `/etc/apt/sources.list.d/github-cli.sources`, with `ansible.builtin.deb822_repository`.
 Ubuntu's own `gh` package is older than the GitHub release.
 
 ## Requirements
@@ -23,13 +23,13 @@ Ubuntu's own `gh` package is older than the GitHub release.
 
 ## Role Variables
 
-| Variable              | Default                                                           | Description                                                    |
-| --------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------- |
-| `gh_package_name`     | `"gh"`                                                            | Name of the GitHub CLI package.                                |
-| `gh_package_state`    | `"present"`                                                       | `present` or `latest`. Use `latest` to upgrade an existing gh. |
-| `gh_apt_keyring_url`  | `"https://cli.github.com/packages/githubcli-archive-keyring.gpg"` | URL of the apt archive keyring. Ubuntu only.                   |
-| `gh_apt_keyring_path` | `"/etc/apt/keyrings/githubcli-archive-keyring.gpg"`               | Where the keyring is saved. Ubuntu only.                       |
-| `gh_apt_repo_url`     | `"https://cli.github.com/packages"`                               | URL of the apt repository. Ubuntu only.                        |
+| Variable              | Default                                                           | Description                                                          |
+| --------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `gh_package_state`    | `"present"`                                                       | `present` or `latest`. Use `latest` to upgrade an existing gh.       |
+| `gh_apt_keyring_url`  | `"https://cli.github.com/packages/githubcli-archive-keyring.gpg"` | URL of the apt archive keyring. Ubuntu only.                         |
+| `gh_apt_repo_url`     | `"https://cli.github.com/packages"`                               | URL of the apt repository. Ubuntu only.                              |
+| `gh_apt_repo_name`    | `"github-cli"`                                                    | Name of the apt source and keyring files. Ubuntu only.               |
+| `gh_apt_repo_channel` | `"stable"`                                                        | Suite of the apt repository. Ubuntu only.                            |
 
 All variables are validated by `meta/argument_specs.yml`.
 
@@ -68,7 +68,8 @@ leave the repository configured without the package installed; re-running the ro
 ## Roll-back capabilities
 
 None. To remove the install on Ubuntu, remove the `gh` package,
-`/etc/apt/sources.list.d/github-cli.list` and the keyring file. On macOS, run `brew uninstall gh`.
+`/etc/apt/sources.list.d/github-cli.sources` and `/etc/apt/keyrings/github-cli.gpg`. On macOS, run
+`brew uninstall gh`.
 
 ## License
 

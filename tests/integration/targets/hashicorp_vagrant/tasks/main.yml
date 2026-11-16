@@ -10,8 +10,6 @@
     - name: Apply the hashicorp_vagrant role
       ansible.builtin.include_role:
         name: kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
-      vars:
-        hashicorp_vagrant_sudo_password: "{{ ansible_become_password | default(omit) }}"
 
     - name: Run vagrant --version
       ansible.builtin.command: /opt/vagrant/bin/vagrant --version

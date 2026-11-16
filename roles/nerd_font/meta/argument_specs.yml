@@ -15,7 +15,7 @@ argument_specs:
         description:
           - Nerd Fonts to install, by Homebrew cask name without the 'font-' prefix and '-nerd-font' suffix.
           - For example 'fira-code' installs the 'font-fira-code-nerd-font' cask.
-        default: ["fira-code"]
+        default: ["hack"]
       nerd_font_package_state:
         type: str
         description: State of the font casks. Use 'latest' to upgrade existing fonts.

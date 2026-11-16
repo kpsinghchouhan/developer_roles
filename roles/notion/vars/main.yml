@@ -2,4 +2,4 @@
 # vars file for kpsinghchouhan.linux_developer_roles.notion
 
 # Notion cask name
-__notion_cask_name: 'notion'
+__notion_cask_name: notion

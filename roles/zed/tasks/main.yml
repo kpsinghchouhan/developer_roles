@@ -7,6 +7,8 @@
       - ansible_facts['os_family'] == 'Darwin'
     fail_msg: "The zed role supports macOS only. This host is {{ ansible_facts['os_family'] }}."
     quiet: true
+  tags:
+    - always
 
 # The cask is marked auto_updates, so Homebrew only upgrades it with --greedy
 - name: Install Zed cask with Homebrew
@@ -15,3 +17,6 @@
     state: "{{ zed_package_state }}"
     greedy: "{{ zed_package_state == 'latest' }}"
   become: false
+  tags:
+    - install
+    - zed_install

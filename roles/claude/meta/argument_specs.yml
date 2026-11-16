@@ -30,14 +30,16 @@ argument_specs:
         type: str
         description: Base URL of the Claude Code apt repository, without the channel. Ubuntu only.
         default: "https://downloads.claude.ai/claude-code/apt"
+      claude_code_apt_repo_name:
+        type: str
+        description:
+          - Name of the apt repository. Ubuntu only.
+          - Names the source file /etc/apt/sources.list.d/<name>.sources and the key /etc/apt/keyrings/<name>.asc.
+        default: "claude-code"
       claude_desktop_install:
         type: bool
         description: Whether to install Claude Desktop. macOS only.
         default: true
-      claude_desktop_cask_name:
-        type: str
-        description: Name of the Claude Desktop Homebrew cask. macOS only.
-        default: "claude"
       claude_desktop_package_state:
         type: str
         description: State of the Claude Desktop cask. Use 'latest' to upgrade an existing install. macOS only.

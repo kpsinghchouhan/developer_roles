@@ -23,7 +23,7 @@ Homebrew installs each font to `~/Library/Fonts`.
 
 | Variable                  | Default         | Description                                                                 |
 | ------------------------- | --------------- | --------------------------------------------------------------------------- |
-| `nerd_font_fonts`         | `["fira-code"]` | Fonts to install, by cask name without `font-` and `-nerd-font`.            |
+| `nerd_font_fonts`         | `["hack"]`      | Fonts to install, by cask name without `font-` and `-nerd-font`.            |
 | `nerd_font_package_state` | `"present"`     | `present` or `latest`. Use `latest` to upgrade existing fonts.              |
 
 All variables are validated by `meta/argument_specs.yml`.

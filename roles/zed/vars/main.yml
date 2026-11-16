@@ -2,4 +2,4 @@
 # vars file for kpsinghchouhan.linux_developer_roles.zed
 
 # Zed cask name
-__zed_cask_name: 'zed'
+__zed_cask_name: zed

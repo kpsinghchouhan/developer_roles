@@ -10,8 +10,6 @@
     - name: Apply the virtualbox role
       ansible.builtin.include_role:
         name: kpsinghchouhan.linux_developer_roles.virtualbox
-      vars:
-        virtualbox_sudo_password: "{{ ansible_become_password | default(omit) }}"
 
     - name: Run VBoxManage --version
       ansible.builtin.command: /Applications/VirtualBox.app/Contents/MacOS/VBoxManage --version

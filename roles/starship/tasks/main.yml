@@ -2,7 +2,41 @@
 # tasks file for kpsinghchouhan.linux_developer_roles.starship
 
 - name: "Install starship for {{ ansible_facts['os_family'] }}"
-  ansible.builtin.include_tasks: "install_{{ ansible_facts['os_family'] | lower }}.yml"
+  ansible.builtin.include_tasks:
+    file: "install_{{ ansible_facts['os_family'] | lower }}.yml"
+    apply:
+      tags:
+        - install
+        - starship_install
+  tags:
+    - always
 
 - name: "Configure starship for user {{ ansible_facts['user_id'] }}"
-  ansible.builtin.include_tasks: configure.yml
+  tags:
+    - config
+    - starship_config
+  block:
+    - name: Create the .config directory
+      ansible.builtin.file:
+        path: "{{ starship_config_home }}/.config"
+        state: directory
+        owner: "{{ ansible_facts['user_id'] }}"
+        group: "{{ ansible_facts['user_gid'] }}"
+        mode: '0755'
+
+    - name: Copy starship.toml
+      ansible.builtin.copy:
+        src: "{{ starship_config_src }}"
+        dest: "{{ starship_config_home }}/.config/starship.toml"
+        owner: "{{ ansible_facts['user_id'] }}"
+        group: "{{ ansible_facts['user_gid'] }}"
+        mode: "{{ starship_config_mode }}"
+
+    - name: Enable starship in the shell rc file
+      ansible.builtin.lineinfile:
+        path: "{{ starship_config_home }}/.{{ starship_shell }}rc"
+        line: 'eval "$(starship init {{ starship_shell }})"'
+        create: true
+        owner: "{{ ansible_facts['user_id'] }}"
+        group: "{{ ansible_facts['user_gid'] }}"
+        mode: '0644'
