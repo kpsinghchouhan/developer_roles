@@ -1,0 +1,5 @@
+---
+breaking_changes:
+  - collection - rename the collection from ``kpsinghchouhan.linux_developer_roles`` to
+    ``kpsinghchouhan.developer_roles``. Update role references to use the new FQCN, for example
+    ``kpsinghchouhan.developer_roles.git``.
