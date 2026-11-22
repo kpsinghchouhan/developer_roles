@@ -9,7 +9,7 @@
   block:
     - name: Apply the google_drive role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.google_drive
+        name: kpsinghchouhan.developer_roles.google_drive
 
     - name: Find the Google Drive app
       ansible.builtin.stat:
@@ -26,7 +26,7 @@
   block:
     - name: Apply the google_drive role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.google_drive
+        name: kpsinghchouhan.developer_roles.google_drive
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

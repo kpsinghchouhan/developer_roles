@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.starship
+# kpsinghchouhan.developer_roles.starship
 
 Installs the [starship](https://starship.rs) prompt, copies its config file to
 `~/.config/starship.toml` and enables it in the rc file of the user's login shell (bash or zsh).
@@ -58,8 +58,8 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.gh
-    - role: kpsinghchouhan.linux_developer_roles.starship
+    - role: kpsinghchouhan.developer_roles.gh
+    - role: kpsinghchouhan.developer_roles.starship
       starship_config_src: "{{ playbook_dir }}/files/starship.toml"
       starship_shell: zsh
 ```

@@ -1,5 +1,5 @@
 ---
-# defaults file for kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+# defaults file for kpsinghchouhan.developer_roles.hashicorp_vagrant
 
 # Package state: 'present' or 'latest'
 hashicorp_vagrant_package_state: present

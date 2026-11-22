@@ -1,5 +1,5 @@
 ---
-# defaults file for kpsinghchouhan.linux_developer_roles.claude
+# defaults file for kpsinghchouhan.developer_roles.claude
 
 # Claude Code release channel: 'stable' or 'latest'
 claude_code_channel: stable

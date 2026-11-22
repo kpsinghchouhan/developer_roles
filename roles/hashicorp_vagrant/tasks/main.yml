@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+# tasks file for kpsinghchouhan.developer_roles.hashicorp_vagrant
 
 - name: Check that the host runs macOS
   ansible.builtin.assert:

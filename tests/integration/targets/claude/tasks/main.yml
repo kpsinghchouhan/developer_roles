@@ -6,7 +6,7 @@
 
 - name: Apply the claude role
   ansible.builtin.include_role:
-    name: kpsinghchouhan.linux_developer_roles.claude
+    name: kpsinghchouhan.developer_roles.claude
 
 - name: Run claude --version
   ansible.builtin.command: claude --version

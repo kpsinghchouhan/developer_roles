@@ -1,5 +1,5 @@
 ---
-name: Release kpsinghchouhan.linux_developer_roles
+name: Release kpsinghchouhan.developer_roles
 
 on: # yamllint disable-line rule:truthy
   release:

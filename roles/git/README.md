@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.git
+# kpsinghchouhan.developer_roles.git
 
 Installs git and manages the connecting user's `~/.gitconfig`.
 
@@ -51,7 +51,7 @@ None.
 - name: Configure git for developers
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.git
+    - role: kpsinghchouhan.developer_roles.git
       git_user_name: "Jane Doe"
       git_user_email: "jane@example.com"
       git_core_editor: "code --wait"

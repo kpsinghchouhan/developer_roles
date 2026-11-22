@@ -15,7 +15,7 @@
 
     - name: Apply the ghostty role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.ghostty
+        name: kpsinghchouhan.developer_roles.ghostty
       vars:
         ghostty_config_home: "{{ __ghostty_test_home['path'] }}"
 
@@ -57,7 +57,7 @@
   block:
     - name: Apply the ghostty role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.ghostty
+        name: kpsinghchouhan.developer_roles.ghostty
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

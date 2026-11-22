@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.starship
+# tasks file for kpsinghchouhan.developer_roles.starship
 
 - name: "Install starship for {{ ansible_facts['os_family'] }}"
   ansible.builtin.include_tasks:

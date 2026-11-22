@@ -1,4 +1,4 @@
-"""Unit tests for kpsinghchouhan.linux_developer_roles."""
+"""Unit tests for kpsinghchouhan.developer_roles."""
 
 
 def test_basic() -> None:

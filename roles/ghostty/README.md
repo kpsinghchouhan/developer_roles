@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.ghostty
+# kpsinghchouhan.developer_roles.ghostty
 
 Installs the [Ghostty](https://ghostty.org) terminal on macOS and copies its config file to
 `~/.config/ghostty/config`.
@@ -64,9 +64,9 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.nerd_font
+    - role: kpsinghchouhan.developer_roles.nerd_font
       when: ansible_facts['os_family'] == 'Darwin'
-    - role: kpsinghchouhan.linux_developer_roles.ghostty
+    - role: kpsinghchouhan.developer_roles.ghostty
       ghostty_config_src: "{{ playbook_dir }}/files/ghostty/config"
       when: ansible_facts['os_family'] == 'Darwin'
 ```

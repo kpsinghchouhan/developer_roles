@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.google_drive
+# kpsinghchouhan.developer_roles.google_drive
 
 Installs [Google Drive for desktop](https://www.google.com/drive/download/) on macOS.
 
@@ -50,7 +50,7 @@ None.
 - name: Install desktop apps
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.google_drive
+    - role: kpsinghchouhan.developer_roles.google_drive
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

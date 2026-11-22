@@ -9,7 +9,7 @@
   block:
     - name: Apply the nerd_font role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.nerd_font
+        name: kpsinghchouhan.developer_roles.nerd_font
 
     - name: List the installed Nerd Font cask
       ansible.builtin.command: brew list --cask font-hack-nerd-font
@@ -26,7 +26,7 @@
   block:
     - name: Apply the nerd_font role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.nerd_font
+        name: kpsinghchouhan.developer_roles.nerd_font
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

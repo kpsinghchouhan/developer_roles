@@ -10,5 +10,5 @@ v0.1.0
 Release Summary
 ---------------
 
-This is the initial release of ``kpsinghchouhan.linux_developer_roles``
+This is the initial release of ``kpsinghchouhan.developer_roles``
 collection on 2026-01-23.

@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.virtualbox
+# kpsinghchouhan.developer_roles.virtualbox
 
 Installs [Oracle VirtualBox](https://www.virtualbox.org) on macOS.
 
@@ -48,9 +48,9 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.virtualbox
+    - role: kpsinghchouhan.developer_roles.virtualbox
       when: ansible_facts['os_family'] == 'Darwin'
-    - role: kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+    - role: kpsinghchouhan.developer_roles.hashicorp_vagrant
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

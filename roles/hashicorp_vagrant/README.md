@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+# kpsinghchouhan.developer_roles.hashicorp_vagrant
 
 Installs [HashiCorp Vagrant](https://developer.hashicorp.com/vagrant) on macOS.
 
@@ -44,7 +44,7 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+    - role: kpsinghchouhan.developer_roles.hashicorp_vagrant
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

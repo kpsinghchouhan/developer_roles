@@ -9,7 +9,7 @@
   block:
     - name: Apply the hashicorp_vagrant role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+        name: kpsinghchouhan.developer_roles.hashicorp_vagrant
 
     - name: Run vagrant --version
       ansible.builtin.command: /opt/vagrant/bin/vagrant --version
@@ -26,7 +26,7 @@
   block:
     - name: Apply the hashicorp_vagrant role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.hashicorp_vagrant
+        name: kpsinghchouhan.developer_roles.hashicorp_vagrant
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

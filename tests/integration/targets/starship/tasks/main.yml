@@ -14,7 +14,7 @@
   block:
     - name: Apply the starship role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.starship
+        name: kpsinghchouhan.developer_roles.starship
       vars:
         starship_config_home: "{{ __starship_test_home['path'] }}"
 

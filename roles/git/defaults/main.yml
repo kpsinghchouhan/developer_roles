@@ -1,5 +1,5 @@
 ---
-# defaults file for kpsinghchouhan.linux_developer_roles.git
+# defaults file for kpsinghchouhan.developer_roles.git
 
 # Git binary path
 git_bin_path: '/usr/bin/git'

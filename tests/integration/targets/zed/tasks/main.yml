@@ -9,7 +9,7 @@
   block:
     - name: Apply the zed role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.zed
+        name: kpsinghchouhan.developer_roles.zed
 
     - name: Find the Zed app
       ansible.builtin.stat:
@@ -35,7 +35,7 @@
   block:
     - name: Apply the zed role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.zed
+        name: kpsinghchouhan.developer_roles.zed
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

@@ -9,7 +9,7 @@
   block:
     - name: Apply the virtualbox role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.virtualbox
+        name: kpsinghchouhan.developer_roles.virtualbox
 
     - name: Run VBoxManage --version
       ansible.builtin.command: /Applications/VirtualBox.app/Contents/MacOS/VBoxManage --version
@@ -26,7 +26,7 @@
   block:
     - name: Apply the virtualbox role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.virtualbox
+        name: kpsinghchouhan.developer_roles.virtualbox
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

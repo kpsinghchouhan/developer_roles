@@ -1,5 +1,5 @@
 ---
-# vars file for kpsinghchouhan.linux_developer_roles.gh
+# vars file for kpsinghchouhan.developer_roles.gh
 
 # GitHub CLI package name
 __gh_package_name: gh

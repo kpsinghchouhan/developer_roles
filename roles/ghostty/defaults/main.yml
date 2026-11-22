@@ -1,5 +1,5 @@
 ---
-# defaults file for kpsinghchouhan.linux_developer_roles.ghostty
+# defaults file for kpsinghchouhan.developer_roles.ghostty
 
 # Package state: 'present' or 'latest'
 ghostty_package_state: present

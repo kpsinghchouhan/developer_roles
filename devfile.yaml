@@ -1,7 +1,7 @@
 ---
 schemaVersion: 2.2.2
 metadata:
-  name: kpsinghchouhan.linux_developer_roles-8126ac01
+  name: kpsinghchouhan.developer_roles-8126ac01
 components:
   - name: tooling-container
     container:

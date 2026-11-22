@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.visual_studio_code
+# kpsinghchouhan.developer_roles.visual_studio_code
 
 Installs [Visual Studio Code](https://code.visualstudio.com) on macOS.
 
@@ -50,7 +50,7 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.visual_studio_code
+    - role: kpsinghchouhan.developer_roles.visual_studio_code
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 
