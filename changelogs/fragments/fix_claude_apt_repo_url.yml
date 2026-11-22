@@ -1,0 +1,5 @@
+---
+bugfixes:
+  - claude - append the release channel to the apt repository URL (for example
+    ``https://downloads.claude.ai/claude-code/apt/stable``) so ``apt update`` finds the Release file
+    on Ubuntu.
