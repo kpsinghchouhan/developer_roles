@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.claude
+# kpsinghchouhan.developer_roles.claude
 
 Installs [Claude Code](https://code.claude.com/docs/en/setup) (`claude`) on Ubuntu and macOS, and
 [Claude Desktop](https://claude.ai/download) on macOS.
@@ -50,11 +50,11 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.gh
-    - role: kpsinghchouhan.linux_developer_roles.git
+    - role: kpsinghchouhan.developer_roles.gh
+    - role: kpsinghchouhan.developer_roles.git
       git_user_name: "Jane Doe"
       git_user_email: "jane@example.com"
-    - role: kpsinghchouhan.linux_developer_roles.claude
+    - role: kpsinghchouhan.developer_roles.claude
       claude_code_channel: latest
 ```
 

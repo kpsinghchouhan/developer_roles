@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.nerd_font
+# tasks file for kpsinghchouhan.developer_roles.nerd_font
 
 - name: Check that the host runs macOS
   ansible.builtin.assert:

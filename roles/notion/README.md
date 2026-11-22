@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.notion
+# kpsinghchouhan.developer_roles.notion
 
 Installs the [Notion](https://www.notion.com/desktop) desktop app on macOS.
 
@@ -46,7 +46,7 @@ None.
 - name: Install desktop apps
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.notion
+    - role: kpsinghchouhan.developer_roles.notion
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

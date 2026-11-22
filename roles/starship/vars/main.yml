@@ -1,5 +1,5 @@
 ---
-# vars file for kpsinghchouhan.linux_developer_roles.starship
+# vars file for kpsinghchouhan.developer_roles.starship
 
 # Starship package name
 __starship_package_name: 'starship'

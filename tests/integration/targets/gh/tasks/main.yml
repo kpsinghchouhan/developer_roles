@@ -6,7 +6,7 @@
 
 - name: Apply the gh role
   ansible.builtin.include_role:
-    name: kpsinghchouhan.linux_developer_roles.gh
+    name: kpsinghchouhan.developer_roles.gh
 
 - name: Run gh --version
   ansible.builtin.command: gh --version

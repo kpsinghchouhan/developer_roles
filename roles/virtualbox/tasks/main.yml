@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.virtualbox
+# tasks file for kpsinghchouhan.developer_roles.virtualbox
 
 - name: Check that the host runs macOS
   ansible.builtin.assert:

@@ -1,5 +1,5 @@
 ---
-# defaults file for kpsinghchouhan.linux_developer_roles.gh
+# defaults file for kpsinghchouhan.developer_roles.gh
 
 # Package state: 'present' or 'latest'
 gh_package_state: present

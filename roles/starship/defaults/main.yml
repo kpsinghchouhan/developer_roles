@@ -1,5 +1,5 @@
 ---
-# defaults file for kpsinghchouhan.linux_developer_roles.starship
+# defaults file for kpsinghchouhan.developer_roles.starship
 
 # Package state: 'present' or 'latest'
 starship_package_state: present

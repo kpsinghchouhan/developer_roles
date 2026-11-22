@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.gh
+# kpsinghchouhan.developer_roles.gh
 
 Installs [GitHub CLI](https://cli.github.com/) (`gh`).
 
@@ -46,8 +46,8 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.gh
-    - role: kpsinghchouhan.linux_developer_roles.git
+    - role: kpsinghchouhan.developer_roles.gh
+    - role: kpsinghchouhan.developer_roles.git
       git_user_name: "Jane Doe"
       git_user_email: "jane@example.com"
 ```

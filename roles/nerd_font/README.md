@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.nerd_font
+# kpsinghchouhan.developer_roles.nerd_font
 
 Installs [Nerd Fonts](https://www.nerdfonts.com/) on macOS. Nerd Fonts add icons and symbols
 used by prompts such as [starship](https://starship.rs).
@@ -49,12 +49,12 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.nerd_font
+    - role: kpsinghchouhan.developer_roles.nerd_font
       nerd_font_fonts:
         - fira-code
         - jetbrains-mono
       when: ansible_facts['os_family'] == 'Darwin'
-    - role: kpsinghchouhan.linux_developer_roles.starship
+    - role: kpsinghchouhan.developer_roles.starship
 ```
 
 The role does not change terminal settings. Select the font in your terminal's preferences after

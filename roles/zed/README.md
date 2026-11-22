@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.zed
+# kpsinghchouhan.developer_roles.zed
 
 Installs the [Zed](https://zed.dev) editor on macOS.
 
@@ -48,7 +48,7 @@ None.
 - name: Install developer tools
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.zed
+    - role: kpsinghchouhan.developer_roles.zed
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

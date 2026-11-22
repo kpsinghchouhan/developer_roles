@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.google_drive
+# tasks file for kpsinghchouhan.developer_roles.google_drive
 
 - name: Check that the host runs macOS
   ansible.builtin.assert:

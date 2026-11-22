@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.google_chrome
+# kpsinghchouhan.developer_roles.google_chrome
 
 Installs [Google Chrome](https://www.google.com/chrome/) on macOS.
 
@@ -42,7 +42,7 @@ None.
 - name: Install desktop apps
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.google_chrome
+    - role: kpsinghchouhan.developer_roles.google_chrome
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

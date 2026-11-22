@@ -1,4 +1,4 @@
-# kpsinghchouhan.linux_developer_roles.adobe_acrobat_reader
+# kpsinghchouhan.developer_roles.adobe_acrobat_reader
 
 Installs [Adobe Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html) on macOS.
 
@@ -40,7 +40,7 @@ None.
 - name: Install desktop apps
   hosts: workstations
   roles:
-    - role: kpsinghchouhan.linux_developer_roles.adobe_acrobat_reader
+    - role: kpsinghchouhan.developer_roles.adobe_acrobat_reader
       when: ansible_facts['os_family'] == 'Darwin'
 ```
 

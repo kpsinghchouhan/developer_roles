@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.gh
+# tasks file for kpsinghchouhan.developer_roles.gh
 
 - name: "Install GitHub CLI for {{ ansible_facts['os_family'] }}"
   ansible.builtin.include_tasks:

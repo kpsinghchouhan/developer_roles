@@ -9,7 +9,7 @@
   block:
     - name: Apply the visual_studio_code role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.visual_studio_code
+        name: kpsinghchouhan.developer_roles.visual_studio_code
 
     - name: Find the Visual Studio Code app
       ansible.builtin.stat:
@@ -35,7 +35,7 @@
   block:
     - name: Apply the visual_studio_code role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.visual_studio_code
+        name: kpsinghchouhan.developer_roles.visual_studio_code
 
     - name: Fail because the role did not fail
       ansible.builtin.fail:

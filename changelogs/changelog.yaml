@@ -2,7 +2,7 @@ ancestor: null
 releases:
   0.1.0:
     changes:
-      release_summary: 'This is the initial release of ``kpsinghchouhan.linux_developer_roles``
+      release_summary: 'This is the initial release of ``kpsinghchouhan.developer_roles``
 
         collection on 2026-01-23.
 

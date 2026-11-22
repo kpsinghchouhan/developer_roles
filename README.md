@@ -1,6 +1,6 @@
-# kpsinghchouhan linux_developer_roles Collection
+# kpsinghchouhan developer_roles Collection
 
-This repository contains the `kpsinghchouhan.linux_developer_roles` Ansible Collection.
+This repository contains the `kpsinghchouhan.developer_roles` Ansible Collection.
 
 <!--start requires_ansible-->
 <!--end requires_ansible-->
@@ -19,7 +19,7 @@ which requirements are needed.
 ## Using this collection
 
 ```bash
-    ansible-galaxy collection install kpsinghchouhan.linux_developer_roles
+    ansible-galaxy collection install kpsinghchouhan.developer_roles
 ```
 
 You can also include it in a `requirements.yml` file and install it via
@@ -27,23 +27,23 @@ You can also include it in a `requirements.yml` file and install it via
 
 ```yaml
 collections:
-  - name: kpsinghchouhan.linux_developer_roles
+  - name: kpsinghchouhan.developer_roles
 ```
 
 To upgrade the collection to the latest available version, run the following
 command:
 
 ```bash
-ansible-galaxy collection install kpsinghchouhan.linux_developer_roles --upgrade
+ansible-galaxy collection install kpsinghchouhan.developer_roles --upgrade
 ```
 
 You can also install a specific version of the collection, for example, if you
 need to downgrade when something is broken in the latest version (please report
 an issue in this repository). Use the following syntax where `X.Y.Z` can be any
-[available version](https://galaxy.ansible.com/kpsinghchouhan/linux_developer_roles):
+[available version](https://galaxy.ansible.com/kpsinghchouhan/developer_roles):
 
 ```bash
-ansible-galaxy collection install kpsinghchouhan.linux_developer_roles:==X.Y.Z
+ansible-galaxy collection install kpsinghchouhan.developer_roles:==X.Y.Z
 ```
 
 See
@@ -53,7 +53,7 @@ for more details.
 ## Release notes
 
 See the
-[changelog](https://github.com/ansible-collections/kpsinghchouhan.linux_developer_roles/tree/main/CHANGELOG.rst).
+[changelog](https://github.com/kpsinghchouhan/developer_roles/tree/main/CHANGELOG.rst).
 
 ## Roadmap
 

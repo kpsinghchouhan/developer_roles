@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.visual_studio_code
+# tasks file for kpsinghchouhan.developer_roles.visual_studio_code
 
 - name: Check that the host runs macOS
   ansible.builtin.assert:

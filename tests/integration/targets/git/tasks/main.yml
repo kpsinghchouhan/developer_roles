@@ -9,7 +9,7 @@
   block:
     - name: Apply the git role
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.git
+        name: kpsinghchouhan.developer_roles.git
       vars:
         git_install_package: false
         git_config_home: "{{ __git_test_home['path'] }}"
@@ -41,7 +41,7 @@
 
     - name: Apply the git role a second time
       ansible.builtin.include_role:
-        name: kpsinghchouhan.linux_developer_roles.git
+        name: kpsinghchouhan.developer_roles.git
       vars:
         git_install_package: false
         git_config_home: "{{ __git_test_home['path'] }}"

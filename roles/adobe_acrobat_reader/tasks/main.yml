@@ -1,5 +1,5 @@
 ---
-# tasks file for kpsinghchouhan.linux_developer_roles.adobe_acrobat_reader
+# tasks file for kpsinghchouhan.developer_roles.adobe_acrobat_reader
 
 - name: Check that the host runs macOS
   ansible.builtin.assert:
