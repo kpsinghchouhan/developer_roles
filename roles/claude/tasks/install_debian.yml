@@ -7,7 +7,7 @@
         name: "{{ claude_code_apt_repo_name }}"
         state: present
         types: deb
-        uris: "{{ claude_code_apt_repo_url }}"
+        uris: "{{ claude_code_apt_repo_url }}/{{ claude_code_channel }}"
         suites: "{{ claude_code_channel }}"
         components:
           - main

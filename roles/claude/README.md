@@ -29,7 +29,7 @@ the repository as `/etc/apt/sources.list.d/claude-code.sources`, with
 | `claude_code_channel`          | `"stable"`                                       | `stable` or `latest`. Selects the apt repository on Ubuntu and the cask on macOS.   |
 | `claude_code_package_state`    | `"present"`                                      | `present` or `latest`. Use `latest` to upgrade an existing Claude Code.             |
 | `claude_code_apt_keyring_url`  | `"https://downloads.claude.ai/keys/claude-code.asc"` | URL of the release signing key. Ubuntu only.                                    |
-| `claude_code_apt_repo_url`     | `"https://downloads.claude.ai/claude-code/apt"`  | Base URL of the apt repository; the channel is the apt suite. Ubuntu only.          |
+| `claude_code_apt_repo_url`     | `"https://downloads.claude.ai/claude-code/apt"`  | Base URL of the apt repository; the channel is appended as the path and suite. Ubuntu only. |
 | `claude_code_apt_repo_name`    | `"claude-code"`                                  | Name of the apt source and key files. Ubuntu only.                                  |
 | `claude_desktop_install`       | `true`                                           | Install Claude Desktop. macOS only.                                                 |
 | `claude_desktop_package_state` | `"present"`                                      | `present` or `latest`. Use `latest` to upgrade an existing Claude Desktop. macOS only. |
